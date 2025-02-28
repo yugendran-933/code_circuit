@@ -443,43 +443,16 @@
         </div>
     </footer>
 
-    <!-- Registration Modal -->
     <div id="registration-modal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <h2>Register for Course</h2>
             <p>You're registering for: <span id="modal-course-name"></span></p>
-            <form id="registration-form">
-                <div class="form-group">
-                    <label for="reg-name">Full Name</label>
-                    <input type="text" id="reg-name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="reg-email">Email Address</label>
-                    <input type="email" id="reg-email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="reg-phone">Phone Number</label>
-                    <input type="tel" id="reg-phone" name="phone">
-                </div>
-                <div class="form-group">
-                    <label for="reg-experience">Experience Level</label>
-                    <select id="reg-experience" name="experience">
-                        <option value="none">No Experience</option>
-                        <option value="beginner">Beginner</option>
-                        <option value="intermediate">Intermediate</option>
-                        <option value="advanced">Advanced</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="reg-hardware">Hardware Kit Option</label>
-                    <select id="reg-hardware" name="hardware">
-                        <option value="purchase">Purchase Kit from TechBot ($149)</option>
-                        <option value="own">I'll provide my own hardware</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn">Complete Registration</button>
-            </form>
+            <!-- Google Form Embedded -->
+            <iframe id="google-form-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSc3uYpjhXYbSPsxyh4KB2axkWartHOBG7wue50BOCALjjkF4g/viewform?embedded=true" 
+                width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+                Loading…
+            </iframe>
         </div>
     </div>
 

@@ -170,38 +170,59 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Course registration modal
-    const registerButtons = document.querySelectorAll('.register-btn');
-    const modal = document.getElementById('registration-modal');
-    const closeModal = document.querySelector('.close-modal');
-    
-    if(registerButtons.length > 0 && modal) {
-        registerButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
+// Course registration modal
+const registerButtons = document.querySelectorAll('.register-btn');
+const modal = document.getElementById('registration-modal');
+const closeModal = document.querySelector('.close-modal');
+
+if(registerButtons.length > 0 && modal) {
+    registerButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Get course info
+            const courseName = this.getAttribute('data-course');
+            document.getElementById('modal-course-name').textContent = courseName;
+            
+            // Update the iframe src with course parameter
+            const iframe = document.getElementById('google-form-iframe');
+            if(iframe) {
+                // Base Google Form URL
+                let baseUrl = "https://docs.google.com/forms/d/e/1FAIpQLSc3uYpjhXYbSPsxyh4KB2axkWartHOBG7wue50BOCALjjkF4g/viewform";
                 
-                // Get course info
-                const courseName = this.getAttribute('data-course');
-                document.getElementById('modal-course-name').textContent = courseName;
-                
-                // Show modal
-                modal.style.display = 'flex';
-            });
-        });
-        
-        // Close modal when clicking X
-        closeModal.addEventListener('click', function() {
-            modal.style.display = 'none';
-        });
-        
-        // Close modal when clicking outside
-        window.addEventListener('click', function(e) {
-            if(e.target === modal) {
-                modal.style.display = 'none';
+                // Try both common entry field formats
+                iframe.src = baseUrl + "?embedded=true&entry.1530364862=" + encodeURIComponent(courseName);
             }
+            
+            // Show modal
+            modal.style.display = 'flex';
         });
-    }
+    });
     
+    // Close modal when clicking X
+    closeModal.addEventListener('click', function() {
+        modal.style.display = 'none';
+        
+        // Reset iframe src
+        const iframe = document.getElementById('google-form-iframe');
+        if(iframe) {
+            iframe.src = "https://docs.google.com/forms/d/e/1FAIpQLSc3uYpjhXYbSPsxyh4KB2axkWartHOBG7wue50BOCALjjkF4g/viewform?embedded=true";
+        }
+    });
+    
+    // Close modal when clicking outside
+    window.addEventListener('click', function(e) {
+        if(e.target === modal) {
+            modal.style.display = 'none';
+            
+            // Reset iframe src
+            const iframe = document.getElementById('google-form-iframe');
+            if(iframe) {
+                iframe.src = "https://docs.google.com/forms/d/e/1FAIpQLSc3uYpjhXYbSPsxyh4KB2axkWartHOBG7wue50BOCALjjkF4g/viewform?embedded=true";
+            }
+        }
+    });
+} 
     // Animated counter for stats
     const counters = document.querySelectorAll('.counter');
     

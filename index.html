@@ -9,22 +9,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Header (copy from above) -->
     <header>
         <nav>
-            <a href="index.html" class="logo">Tech<span>Bot</span> Robotics</a>
+            <a href="index.html" class="logo">Code &<span>Circuit</span> Academy</a>
             <button id="mobile-nav-toggle" class="mobile-nav-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul id="main-nav">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#instructors">Our Team</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#login" class="btn">Login</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn">Login</a></li>
+                <li class="language-selector">
+                    <select id="language-select">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </li>
             </ul>
         </nav>
     </header>
@@ -33,8 +42,8 @@
         <div class="container">
             <h1>Build the Future with Robotics</h1>
             <p>Learn robotics from industry experts and gain hands-on experience with real-world projects. From beginner to advanced, we have courses for all skill levels.</p>
-            <a href="#courses" class="btn">Explore Courses</a>
-            <a href="#about" class="btn btn-secondary">Learn More</a>
+            <a href="courses.html" class="btn">Explore Courses</a>
+            <a href="about.html" class="btn btn-secondary">Learn More</a>
         </div>
     </section>
     
@@ -72,245 +81,15 @@
                 </div>
             </div>
         </section>
-        
-        <section id="courses" class="main-content">
-            <h2 class="section-title">Our Courses</h2>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All Courses</button>
-                <button class="filter-btn" data-filter="beginner">Beginner</button>
-                <button class="filter-btn" data-filter="intermediate">Intermediate</button>
-                <button class="filter-btn" data-filter="advanced">Advanced</button>
-            </div>
-            <div class="courses-grid">
-                <div class="course-card beginner">
-                    <div class="course-image" style="background-image: url('images/course-intro.jpg');"></div>
-                    <div class="course-content">
-                        <h3 class="course-title">Introduction to Robotics</h3>
-                        <p class="course-description">Learn the fundamentals of robotics, including basic components and programming concepts.</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock"></i> 8 weeks</span>
-                            <span><i class="fas fa-user-graduate"></i> Beginner</span>
-                        </div>
-                        <a href="#" class="btn register-btn" data-course="Introduction to Robotics">Register Now</a>
-                    </div>
-                </div>
-                <div class="course-card beginner">
-                    <div class="course-image" style="background-image: url('images/course-arduino.jpg');"></div>
-                    <div class="course-content">
-                        <h3 class="course-title">Arduino Robotics</h3>
-                        <p class="course-description">Build simple robots using Arduino microcontrollers and learn programming basics.</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock"></i> 10 weeks</span>
-                            <span><i class="fas fa-user-graduate"></i> Beginner</span>
-                        </div>
-                        <a href="#" class="btn register-btn" data-course="Arduino Robotics">Register Now</a>
-                    </div>
-                </div>
-                <div class="course-card intermediate">
-                    <div class="course-image" style="background-image: url('images/course-autonomous.jpg');"></div>
-                    <div class="course-content">
-                        <h3 class="course-title">Autonomous Navigation</h3>
-                        <p class="course-description">Create robots that can navigate environments using sensors and algorithms.</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock"></i> 12 weeks</span>
-                            <span><i class="fas fa-user-graduate"></i> Intermediate</span>
-                        </div>
-                        <a href="#" class="btn register-btn" data-course="Autonomous Navigation">Register Now</a>
-                    </div>
-                </div>
-                <div class="course-card intermediate">
-                    <div class="course-image" style="background-image: url('images/course-ros.jpg');"></div>
-                    <div class="course-content">
-                        <h3 class="course-title">ROS for Robotics</h3>
-                        <p class="course-description">Master the Robot Operating System (ROS) for developing complex robotic applications.</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock"></i> 14 weeks</span>
-                            <span><i class="fas fa-user-graduate"></i> Intermediate</span>
-                        </div>
-                        <a href="#" class="btn register-btn" data-course="ROS for Robotics">Register Now</a>
-                    </div>
-                </div>
-                <div class="course-card advanced">
-                    <div class="course-image" style="background-image: url('images/course-ai.jpg');"></div>
-                    <div class="course-content">
-                        <h3 class="course-title">AI in Robotics</h3>
-                        <p class="course-description">Implement artificial intelligence and machine learning in robotic systems.</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock"></i> 16 weeks</span>
-                            <span><i class="fas fa-user-graduate"></i> Advanced</span>
-                        </div>
-                        <a href="#" class="btn register-btn" data-course="AI in Robotics">Register Now</a>
-                    </div>
-                </div>
-                <div class="course-card advanced">
-                    <div class="course-image" style="background-image: url('images/course-industrial.jpg');"></div>
-                    <div class="course-content">
-                        <h3 class="course-title">Industrial Robotics</h3>
-                        <p class="course-description">Learn about industrial automation, robotic arms, and manufacturing applications.</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock"></i> 15 weeks</span>
-                            <span><i class="fas fa-user-graduate"></i> Advanced</span>
-                        </div>
-                        <a href="#" class="btn register-btn" data-course="Industrial Robotics">Register Now</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="about" class="main-content">
-            <h2 class="section-title">About Our Academy</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>TechBot Robotics Academy was founded in 2023 with the mission to make robotics education accessible to everyone. We believe that hands-on experience is crucial for mastering robotics, which is why all our courses include practical projects and real hardware.</p>
-                    <p>Our curriculum is designed by industry experts and academic professionals to ensure that students learn the most relevant and up-to-date skills in the field of robotics. Whether you're a complete beginner or an experienced engineer looking to expand your knowledge, we have courses that will help you achieve your goals.</p>
-                    <p>At TechBot, we're not just teaching robotics; we're building a community of innovators who will shape the future of technology.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="counter" data-target="1500">0</span>
-                        <p>Students Enrolled</p>
-                    </div>
-                    <div class="stat-item">
-                        <span class="counter" data-target="12">0</span>
-                        <p>Expert Instructors</p>
-                    </div>
-                    <div class="stat-item">
-                        <span class="counter" data-target="25">0</span>
-                        <p>Robotics Courses</p>
-                    </div>
-                    <div class="stat-item">
-                        <span class="counter" data-target="98">0</span>
-                        <p>Satisfaction Rate (%)</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="instructors" class="main-content">
-            <h2 class="section-title">Our Expert Team</h2>
-            <div class="instructor-grid">
-                <div class="instructor-card">
-                    <img src="images/instructor-1.jpg" alt="Dr. Sarah Johnson" class="lazy" data-src="images/instructor-1.jpg">
-                    <h3>Dr. Sarah Johnson</h3>
-                    <p class="instructor-title">Founder & Lead Instructor</p>
-                    <p class="instructor-bio">PhD in Robotics from MIT with 15+ years of experience in industrial automation and AI.</p>
-                    <div class="instructor-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="far fa-envelope"></i></a>
-                    </div>
-                </div>
-                <div class="instructor-card">
-                    <img src="images/instructor-2.jpg" alt="Prof. Michael Chen" class="lazy" data-src="images/instructor-2.jpg">
-                    <h3>Prof. Michael Chen</h3>
-                    <p class="instructor-title">Robotics Engineering Instructor</p>
-                    <p class="instructor-bio">Former lead engineer at Boston Dynamics with expertise in legged robotics and control systems.</p>
-                    <div class="instructor-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="far fa-envelope"></i></a>
-                    </div>
-                </div>
-                <div class="instructor-card">
-                    <img src="images/instructor-3.jpg" alt="Dr. Alex Rodriguez" class="lazy" data-src="images/instructor-3.jpg">
-                    <h3>Dr. Alex Rodriguez</h3>
-                    <p class="instructor-title">AI & Computer Vision Specialist</p>
-                    <p class="instructor-bio">Specialist in computer vision and machine learning with applications in autonomous robots.</p>
-                    <div class="instructor-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="far fa-envelope"></i></a>
-                    </div>
-                </div>
-                <div class="instructor-card">
-                    <img src="images/instructor-4.jpg" alt="Emma Williams" class="lazy" data-src="images/instructor-4.jpg">
-                    <h3>Emma Williams</h3>
-                    <p class="instructor-title">Hardware & Electronics Expert</p>
-                    <p class="instructor-bio">Electronics engineer with a passion for teaching and making complex concepts accessible.</p>
-                    <div class="instructor-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="far fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section id="testimonials" class="testimonials">
             <div class="container">
                 <h2 class="section-title">What Our Students Say</h2>
                 <div class="testimonial-container">
-                    <div class="testimonial">
-                        <p class="testimonial-text">"TechBot Academy transformed my interest in robotics into a career path. The hands-on approach and supportive community made learning complex topics enjoyable and practical."</p>
-                        <p class="testimonial-author">- James Wilson, Software Engineer at Robotics Inc.</p>
-                    </div>
-                    <div class="testimonial">
-                        <p class="testimonial-text">"As someone with no prior experience in robotics, I was worried about keeping up. The beginner courses were perfectly paced, and the instructors were always available to help when I got stuck."</p>
-                        <p class="testimonial-author">- Maya Patel, Hobbyist</p>
-                    </div>
-                    <div class="testimonial">
-                        <p class="testimonial-text">"The advanced AI in Robotics course gave me exactly what I needed to level up my career. Within months of completing the course, I landed a job at a leading robotics firm."</p>
-                        <p class="testimonial-author">- David Kim, Robotics Engineer</p>
-                    </div>
+                    <!-- Testimonial content -->
+                    <!-- ... testimonial items ... -->
                     <div class="testimonial-controls">
-                        <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
-                        <div class="testimonial-dots">
-                            <span class="testimonial-dot active"></span>
-                            <span class="testimonial-dot"></span>
-                            <span class="testimonial-dot"></span>
-                        </div>
-                        <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="main-content">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Do I need any prior experience to join the beginner courses?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>No prior experience is necessary for our beginner courses. We start with the fundamentals and gradually build your knowledge and skills. All you need is curiosity and willingness to learn!</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What hardware do I need to purchase for the courses?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Each course has its own hardware kit requirements. When you enroll, you'll receive a detailed list of components needed. We offer hardware kits that include everything required for the course at a discounted price, or you can purchase components separately if you prefer.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Are the courses self-paced or do they follow a schedule?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We offer both options! Our scheduled courses include live sessions, direct instructor feedback, and group projects. Our self-paced options allow you to learn at your own speed with access to all course materials and forum support from instructors and fellow students.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Do you offer job placement assistance?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! Students who complete our advanced certification programs receive career support, including resume reviews, interview preparation, and connections to our industry partners. We also host regular networking events with companies looking to hire robotics talent.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Can I access course materials after completing the course?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolutely! Once you enroll in a course, you have lifetime access to all course materials, updates, and our community forum. We regularly update our course content to keep up with advances in robotics technology.</p>
+                        <!-- Controls -->
                     </div>
                 </div>
             </div>
@@ -320,64 +99,7 @@
             <div class="container">
                 <h2>Ready to Start Your Robotics Journey?</h2>
                 <p>Join thousands of students who have transformed their passion for robotics into valuable skills and exciting careers.</p>
-                <a href="#courses" class="btn">Enroll Now</a>
-            </div>
-        </section>
-
-        <section id="contact" class="main-content">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>123 Tech Boulevard, Innovation District<br>San Francisco, CA 94107</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>info@techbotrobotics.com<br>support@techbotrobotics.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>+1 (555) 123-4567<br>Mon-Fri: 9am - 5pm PST</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
+                <a href="courses.html" class="btn">Enroll Now</a>
             </div>
         </section>
 
@@ -393,6 +115,7 @@
         </section>
     </div>
 
+    <!-- Footer (copy from above) -->
     <footer>
         <div class="container">
             <div class="footer-container">
@@ -409,31 +132,31 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#courses">Courses</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#instructors">Our Team</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Resources</h3>
                     <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Student Projects</a></li>
-                        <li><a href="#">Hardware Kits</a></li>
-                        <li><a href="#">Free Tutorials</a></li>
-                        <li><a href="#">Career Resources</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="projects.html">Student Projects</a></li>
+                        <li><a href="hardware.html">Hardware Kits</a></li>
+                        <li><a href="tutorials.html">Free Tutorials</a></li>
+                        <li><a href="careers.html">Career Resources</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Policies</h3>
                     <ul>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Refund Policy</a></li>
-                        <li><a href="#">Code of Conduct</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                        <li><a href="conduct.html">Code of Conduct</a></li>
                     </ul>
                 </div>
             </div>
@@ -443,19 +166,7 @@
         </div>
     </footer>
 
-    <div id="registration-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Register for Course</h2>
-            <p>You're registering for: <span id="modal-course-name"></span></p>
-            <!-- Google Form Embedded -->
-            <iframe id="google-form-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSc3uYpjhXYbSPsxyh4KB2axkWartHOBG7wue50BOCALjjkF4g/viewform?embedded=true" 
-                width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
-                Loading…
-            </iframe>
-        </div>
-    </div>
-
     <script src="script.js"></script>
+    <script src="language.js"></script>
 </body>
 </html>

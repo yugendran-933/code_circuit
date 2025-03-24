@@ -1,0 +1,227 @@
+
+
+/* CONTACT PAGE STYLES */
+
+/* Modern Why Join Section Styles */
+
+.why-join-modern {
+    padding: 100px 0;
+    background-color: #f0f7ff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background elements */
+.why-join-modern::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(74, 0, 176, 0.05) 0%, rgba(74, 0, 176, 0.01) 100%);
+    top: -100px;
+    left: -100px;
+}
+
+.why-join-modern::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 87, 34, 0.05) 0%, rgba(255, 87, 34, 0.01) 100%);
+    bottom: -200px;
+    right: -200px;
+}
+
+.why-join-modern .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero statement */
+.hero-statement {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.hero-statement h2 {
+    font-size: 2.8rem;
+    line-height: 1.3;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto;
+    font-weight: 700;
+}
+
+.hero-statement .highlight {
+    color: #4a00b0;
+    position: relative;
+}
+
+.hero-statement .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #4a00b0;
+    opacity: 0.3;
+}
+
+/* Benefits grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.benefit-box {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.benefit-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+    margin-bottom: 25px;
+}
+
+.icon-bg {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    position: relative;
+}
+
+.icon-bg.personal {
+    background-color: #4a00b0;
+}
+
+.icon-bg.results {
+    background-color: #ff5722;
+}
+
+.icon-bg.passion {
+    background-color: #e91e63;
+}
+
+.icon-bg.community {
+    background-color: #00bcd4;
+}
+
+/* Icon glow effect */
+.icon-bg::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+}
+
+.icon-bg.personal::before {
+    background-color: #4a00b0;
+}
+
+.icon-bg.results::before {
+    background-color: #ff5722;
+}
+
+.icon-bg.passion::before {
+    background-color: #e91e63;
+}
+
+.icon-bg.community::before {
+    background-color: #00bcd4;
+}
+
+.benefit-box:hover .icon-bg::before {
+    opacity: 0.4;
+}
+
+.benefit-box h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.benefit-box p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* CTA section */
+.cta-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #4a00b0;
+    color: white;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(74, 0, 176, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #5c14c9;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(74, 0, 176, 0.4);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero-statement h2 {
+        font-size: 2.4rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-statement h2 {
+        font-size: 2rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .why-join-modern {
+        padding: 70px 0;
+    }
+}
+
+/* Font Awesome import for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');

@@ -3,211 +3,392 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses - TechBot Robotics Academy</title>
-    <link rel="stylesheet" href="colour.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Robotics Class - Courses</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/courses.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header (copy from above) -->
-    <header>
-        <nav>
-            <a href="index.html" class="logo">Code &<span>Circuit</span> Academy</a>
-            <button id="mobile-nav-toggle" class="mobile-nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul id="main-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html" class="btn">Login</a></li>
-                <li class="language-selector">
-                    <select id="language-select">
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Images/raspberry-pi-logo.png" alt="Robotics Class Logo">
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html" class="active">Courses</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-right">
+                <div class="language-dropdown">
+                    <select>
+                        <option value="">Language</option>
                         <option value="en">English</option>
                         <option value="es">Español</option>
                         <option value="fr">Français</option>
                         <option value="zh">中文</option>
                     </select>
-                </li>
-            </ul>
-        </nav>
+                </div>
+                <a href="#pricing" class="book-button">Book</a>
+            </div>
+            
+            <!-- Mobile menu toggle button -->
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
-    
-    <section class="page-banner">
+
+    <main>
         <div class="container">
-            <h1>Our Robotics Courses</h1>
-            <p>From beginner to advanced, find the perfect course for your robotics journey</p>
-        </div>
-    </section>
-    
-    <div class="container">
-        <section id="courses" class="main-content">
-            <h2 class="section-title">Robotics Course Catalog</h2>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All Courses</button>
-                <button class="filter-btn" data-filter="beginner">Beginner</button>
-                <button class="filter-btn" data-filter="intermediate">Intermediate</button>
-                <button class="filter-btn" data-filter="advanced">Advanced</button>
-            </div>
-            <div class="courses-grid">
-                <div class="course-card beginner">
-                    <div class="course-image" style="background-image: url('images/course-intro.jpg');"></div>
-                    <div class="course-content">
-                        <h3 class="course-title">Introduction to Robotics</h3>
-                        <p class="course-description">Learn the fundamentals of robotics, including basic components and programming concepts.</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock"></i> 8 weeks</span>
-                            <span><i class="fas fa-user-graduate"></i> Beginner</span>
-                        </div>
-                        <a href="#" class="btn register-btn" data-course="Introduction to Robotics">Register Now</a>
-                    </div>
-                </div>
-                <div class="course-card beginner">
-                    <div class="course-image" style="background-image: url('images/course-arduino.jpg');"></div>
-                    <div class="course-content">
-                        <h3 class="course-title">Arduino Robotics</h3>
-                        <p class="course-description">Build simple robots using Arduino microcontrollers and learn programming basics.</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock"></i> 10 weeks</span>
-                            <span><i class="fas fa-user-graduate"></i> Beginner</span>
-                        </div>
-                        <a href="#" class="btn register-btn" data-course="Arduino Robotics">Register Now</a>
-                    </div>
-                </div>
-                <!-- ... other courses ... -->
-            </div>
-        </section>
-        
-        <section id="course-tracks" class="main-content">
-            <h2 class="section-title">Specialized Learning Tracks</h2>
-            <div class="track-container">
-                <div class="track-card">
-                    <div class="track-icon"><i class="fas fa-microchip"></i></div>
-                    <h3>Embedded Systems</h3>
-                    <p>Focus on programming microcontrollers and creating smart embedded devices.</p>
-                    <a href="#" class="btn">View Track</a>
-                </div>
-                <div class="track-card">
-                    <div class="track-icon"><i class="fas fa-robot"></i></div>
-                    <h3>Humanoid Robotics</h3>
-                    <p>Learn to build and program human-like robots with advanced movements.</p>
-                    <a href="#" class="btn">View Track</a>
-                </div>
-                <div class="track-card">
-                    <div class="track-icon"><i class="fas fa-industry"></i></div>
-                    <h3>Industrial Automation</h3>
-                    <p>Master industrial robotics and automation technologies for manufacturing.</p>
-                    <a href="#" class="btn">View Track</a>
-                </div>
-            </div>
-        </section>
-        
-        <section id="enrollment" class="main-content">
-            <h2 class="section-title">How to Enroll</h2>
-            <div class="enrollment-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Choose Your Course</h3>
-                        <p>Browse our catalog and select the course that matches your interests and skill level.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Create an Account</h3>
-                        <p>Sign up for a TechBot account to access our learning platform.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Complete Registration</h3>
-                        <p>Fill out the registration form and make your payment.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Start Learning</h3>
-                        <p>Access course materials and begin your robotics journey!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+            <!-- Courses Hero Section -->
+            <section class="courses-hero">
+                <h1>Arduino Robotics Training Curriculum</h1>
+                <p>Our comprehensive 18-month program consists of three modules designed to take students from complete beginners to advanced Arduino developers.</p>
+            </section>
 
-    <!-- Registration Modal -->
-    <div id="registration-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Register for Course</h2>
-            <p>You're registering for: <span id="modal-course-name"></span></p>
-            <!-- Google Form Embedded -->
-            <iframe id="google-form-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSc3uYpjhXYbSPsxyh4KB2axkWartHOBG7wue50BOCALjjkF4g/viewform?embedded=true" 
-                width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
-                Loading…
-            </iframe>
-        </div>
-    </div>
+            <!-- Course Overview -->
+            <section class="course-overview">
+                <h2>Program Structure</h2>
+                <div class="program-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker beginner"></div>
+                        <div class="timeline-content">
+                            <h3>Beginner Module</h3>
+                            <p>6 months - Foundation skills in electronics and programming</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker intermediate"></div>
+                        <div class="timeline-content">
+                            <h3>Intermediate Module</h3>
+                            <p>6 months - Advanced sensors, motors, and communications</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker advanced"></div>
+                        <div class="timeline-content">
+                            <h3>Advanced Module</h3>
+                            <p>6 months - IoT, custom hardware, and system integration</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <!-- Footer (copy from above) -->
+            <!-- Detailed Curriculum -->
+            <section class="detailed-curriculum">
+                <h2>Detailed Curriculum</h2>
+                
+                <!-- Beginner Module -->
+                <div class="module-container beginner-module">
+                    <div class="module-header">
+                        <h3>Arduino Beginner Module</h3>
+                        <span class="duration">6 Months</span>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 1: Introduction to Electronics & Arduino</h4>
+                        <ul>
+                            <li>Week 1: Course introduction, electronics safety, basic circuit concepts</li>
+                            <li>Week 2: Understanding voltage, current, resistance, and Ohm's Law</li>
+                            <li>Week 3: Reading circuit diagrams, breadboard basics</li>
+                            <li>Week 4: Introduction to Arduino hardware, IDE installation and setup</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 2: Getting Started with Programming</h4>
+                        <ul>
+                            <li>Week 1: First programs - blinking LED, understanding sketch structure</li>
+                            <li>Week 2: Variables and data types</li>
+                            <li>Week 3: Basic operators and math functions</li>
+                            <li>Week 4: Digital input/output, controlling LEDs with buttons</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 3: Control Structures & Circuit Building</h4>
+                        <ul>
+                            <li>Week 1: Conditional statements (if/else)</li>
+                            <li>Week 2: Loops (for, while)</li>
+                            <li>Week 3: Multiple LEDs and patterns</li>
+                            <li>Week 4: Building a traffic light system project</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 4: Working with Sensors</h4>
+                        <ul>
+                            <li>Week 1: Analog input, potentiometers</li>
+                            <li>Week 2: Serial communication and the Serial Monitor</li>
+                            <li>Week 3: Light sensors and applications</li>
+                            <li>Week 4: Temperature sensors and applications</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 5: Intermediate Concepts</h4>
+                        <ul>
+                            <li>Week 1: Functions and modular programming</li>
+                            <li>Week 2: Using libraries</li>
+                            <li>Week 3: Tone generation and simple sounds</li>
+                            <li>Week 4: Introduction to LCD displays</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 6: Capstone Project & Integration</h4>
+                        <ul>
+                            <li>Week 1-2: Planning and designing beginner capstone project</li>
+                            <li>Week 3-4: Building and testing project</li>
+                            <li>Final week: Project presentations and module completion ceremony</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Intermediate Module -->
+                <div class="module-container intermediate-module">
+                    <div class="module-header">
+                        <h3>Arduino Intermediate Module</h3>
+                        <span class="duration">6 Months</span>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 1: Advanced Sensors & Data Processing</h4>
+                        <ul>
+                            <li>Week 1: Review of fundamentals, introducing intermediate goals</li>
+                            <li>Week 2: Ultrasonic distance sensors and applications</li>
+                            <li>Week 3: IR sensors and obstacle detection</li>
+                            <li>Week 4: Multiple sensor integration and data filtering</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 2: Displays & User Interface</h4>
+                        <ul>
+                            <li>Week 1: LCD displays and custom characters</li>
+                            <li>Week 2: OLED displays and graphical interfaces</li>
+                            <li>Week 3: Creating menus and user interfaces</li>
+                            <li>Week 4: Building a sensor monitoring station project</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 3: Motion & Motors</h4>
+                        <ul>
+                            <li>Week 1: Servo motors - control and applications</li>
+                            <li>Week 2: DC motors with motor drivers</li>
+                            <li>Week 3: Stepper motors for precise positioning</li>
+                            <li>Week 4: Building a simple robotic arm project</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 4: Communication & Connectivity</h4>
+                        <ul>
+                            <li>Week 1: Advanced serial communication techniques</li>
+                            <li>Week 2: Arduino-to-Arduino communication</li>
+                            <li>Week 3: Bluetooth modules and wireless control</li>
+                            <li>Week 4: Smartphone-controlled Arduino project</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 5: Advanced Programming Concepts</h4>
+                        <ul>
+                            <li>Week 1: State machines and event-driven programming</li>
+                            <li>Week 2: Interrupts and timers</li>
+                            <li>Week 3: Memory management and optimization</li>
+                            <li>Week 4: Multiple file programs and organization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 6: Intermediate Capstone Project</h4>
+                        <ul>
+                            <li>Week 1: Project planning and component selection</li>
+                            <li>Week 2: Prototyping and circuit design</li>
+                            <li>Week 3: Assembly and coding</li>
+                            <li>Week 4: Testing, refinement, and presentation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Advanced Module -->
+                <div class="module-container advanced-module">
+                    <div class="module-header">
+                        <h3>Arduino Advanced Module</h3>
+                        <span class="duration">6 Months</span>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 1: Advanced Communications & IoT</h4>
+                        <ul>
+                            <li>Week 1: WiFi connectivity with ESP modules</li>
+                            <li>Week 2: RESTful APIs and web server implementation</li>
+                            <li>Week 3: IoT platforms (ThingSpeak, Blynk, Arduino IoT Cloud)</li>
+                            <li>Week 4: MQTT protocol and IoT data exchange</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 2: Hardware Design & Customization</h4>
+                        <ul>
+                            <li>Week 1: PCB design fundamentals</li>
+                            <li>Week 2: Creating custom shields and boards</li>
+                            <li>Week 3: Surface-mount technology introduction</li>
+                            <li>Week 4: Designing a custom Arduino-compatible board</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 3: Advanced Interfacing & Control</h4>
+                        <ul>
+                            <li>Week 1: I2C and SPI communication protocols</li>
+                            <li>Week 2: CAN bus and industrial communications</li>
+                            <li>Week 3: Power control (relays, MOSFETs, high-current applications)</li>
+                            <li>Week 4: Real-time operating systems concepts for Arduino</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 4: Data Management & Processing</h4>
+                        <ul>
+                            <li>Week 1: Advanced data logging techniques</li>
+                            <li>Week 2: SD card operations and file systems</li>
+                            <li>Week 3: Data visualization and analytics</li>
+                            <li>Week 4: Machine learning basics on Arduino (pattern recognition)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 5: System Integration & Optimization</h4>
+                        <ul>
+                            <li>Week 1: Power optimization and battery management</li>
+                            <li>Week 2: Debugging techniques and tools</li>
+                            <li>Week 3: System integration with external hardware/software</li>
+                            <li>Week 4: Security and encryption for IoT devices</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="month-container">
+                        <h4>Month 6: Advanced Capstone Project</h4>
+                        <ul>
+                            <li>Week 1: Project proposal and architecture design</li>
+                            <li>Week 2: Component selection and prototype development</li>
+                            <li>Week 3: System assembly and programming</li>
+                            <li>Week 4: Testing, refinement, and documentation</li>
+                            <li>Final week: Project showcase event and graduation</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section id="pricing" class="pricing-section">
+                <h2>Group Plan</h2>
+                <p class="section-subtitle">Choose the right plan!</p>
+                
+                <div class="pricing-container">
+                    <!-- Beginner Module Plan -->
+                    <div class="pricing-card beginner">
+                        <div class="pricing-image">
+                            <img src="Images/individual-plan.jpg" alt="Beginner class">
+                        </div>
+                        <div class="pricing-content">
+                            <h3>Beginner Module</h3>
+                            <p class="pricing-tagline">Perfect for Starters</p>
+                            <p class="pricing-description">Learn the fundamentals of Arduino programming and electronics. Build your first circuits and understand programming basics through hands-on projects.</p>
+                            
+                            <div class="pricing-details">
+                                <p class="duration">Duration: 1 Hour Per Session</p>
+                                <div class="pricing-options">
+                                    <span class="option">24 Sessions</span>
+                                    <span class="option">6 Months</span>
+                                </div>
+                            </div>
+                            
+                            <div class="pricing-price">
+                                <p class="price-label">Monthly</p>
+                                <p class="price">RM 486</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Intermediate Module Plan -->
+                    <div class="pricing-card intermediate">
+                        <div class="pricing-image">
+                            <img src="Images\esp32.png" alt="Intermediate class">
+                        </div>
+                        <div class="pricing-content">
+                            <h3>Intermediate Module</h3>
+                            <p class="pricing-tagline">For Growing Skills</p>
+                            <p class="pricing-description">Advance your Arduino knowledge with sensors, motors, and wireless communication. Create more complex interactive projects and robotics applications.</p>
+                            
+                            <div class="pricing-details">
+                                <p class="duration">Duration: 1 Hour Per Session</p>
+                                <div class="pricing-options">
+                                    <span class="option">24 Sessions</span>
+                                    <span class="option">6 Months</span>
+                                </div>
+                            </div>
+                            
+                            <div class="pricing-price">
+                                <p class="price-label">Monthly</p>
+                                <p class="price">RM 378</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Advanced Module Plan -->
+                    <div class="pricing-card advanced">
+                        <div class="pricing-image">
+                            <img src="Images/studio.png" alt="Advanced class">
+                        </div>
+                        <div class="pricing-content">
+                            <h3>Advanced Module</h3>
+                            <p class="pricing-tagline">Master-Level Training</p>
+                            <p class="pricing-description">Master professional IoT applications, custom hardware design, and advanced system integration. Develop industry-ready skills with complex Arduino projects.</p>
+                            
+                            <div class="pricing-details">
+                                <p class="duration">Duration: 1 Hour Per Session</p>
+                                <div class="pricing-options">
+                                    <span class="option">24 Sessions</span>
+                                    <span class="option">6 Months</span>
+                                </div>
+                            </div>
+                            
+                            <div class="pricing-price">
+                                <p class="price-label">Monthly</p>
+                                <p class="price">RM 1566</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-container">
+                    <a href="contact.html" class="cta-button">Enroll Now</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
     <footer>
         <div class="container">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>TechBot Robotics</h3>
-                    <p>Building the future through robotics education and innovation.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="team.html">Our Team</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="projects.html">Student Projects</a></li>
-                        <li><a href="hardware.html">Hardware Kits</a></li>
-                        <li><a href="tutorials.html">Free Tutorials</a></li>
-                        <li><a href="careers.html">Career Resources</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Policies</h3>
-                    <ul>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="refund.html">Refund Policy</a></li>
-                        <li><a href="conduct.html">Code of Conduct</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 TechBot Robotics Academy. All rights reserved.</p>
-            </div>
+            <p>&copy; 2025 Robotics Class. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="language.js"></script>
+    <!-- Load JavaScript at the end of the body for better performance -->
+    <script src="js/main.js"></script>
 </body>
 </html>

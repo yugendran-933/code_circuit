@@ -3,170 +3,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechBot Robotics Academy</title>
-    <link rel="stylesheet" href="colour.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Robotics Class</title>
+    <link rel="stylesheet" href="css\styles.css ">
+    <link rel="stylesheet" href="css\alternative-why-join-css.css">
+    <link rel="stylesheet" href="css\googleform.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- JavaScript is now loaded at the end of the body for better performance -->
 </head>
 <body>
-    <!-- Header (copy from above) -->
-    <header>
-        <nav>
-            <a href="index.html" class="logo">Code &<span>Circuit</span> Academy</a>
-            <button id="mobile-nav-toggle" class="mobile-nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul id="main-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html" class="btn">Login</a></li>
-                <li class="language-selector">
-                    <select id="language-select">
-                        <option value="en">English</option>
-                        <option value="es">Español</option>
-                        <option value="fr">Français</option>
-                        <option value="zh">中文</option>
-                    </select>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="home" class="hero">
+    <header class="header">
         <div class="container">
-            <h1>Build the Future with Robotics</h1>
-            <p>Learn robotics from industry experts and gain hands-on experience with real-world projects. From beginner to advanced, we have courses for all skill levels.</p>
-            <a href="courses.html" class="btn">Explore Courses</a>
-            <a href="about.html" class="btn btn-secondary">Learn More</a>
+            <div class="logo">
+                <a href="/">
+                    <img src="Images/raspberry-pi-logo.png" alt="Code and Circuit Academy">
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="index.html">About Us</a></li>
+                    <li><a href="index.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-right">
+                <div class="language-dropdown">
+                    <select>
+                        <option value="">Language</option>
+                        <option value="en">English</option>
+                        <option value="bm">Malay</option>
+                        <option value="ta">தமிழஂ</option>
+                    </select>
+                </div>
+                <a href="#" class="book-button">Book</a>
+            </div>
+            
+            <!-- Mobile menu toggle button -->
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </section>
-    
-    <div class="container">
-        <section id="features" class="main-content">
-            <h2 class="section-title">Why Choose Our Academy</h2>
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>Hands-On Learning</h3>
-                    <p>Build real robots with our comprehensive hardware kits and practical projects.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Expert Instruction</h3>
-                    <p>Learn from industry professionals with years of experience in robotics engineering.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Recognized Certifications</h3>
-                    <p>Earn certificates that are valued by employers in the tech industry.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Community Support</h3>
-                    <p>Join our vibrant community of robotics enthusiasts and collaborate on projects.</p>
-                </div>
-            </div>
-        </section>
+    </header>
 
-        <section id="testimonials" class="testimonials">
-            <div class="container">
-                <h2 class="section-title">What Our Students Say</h2>
-                <div class="testimonial-container">
-                    <!-- Testimonial content -->
-                    <!-- ... testimonial items ... -->
-                    <div class="testimonial-controls">
-                        <!-- Controls -->
+    <!-- Main content sections go here -->
+    <main>
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h1>Learn Robotics with Arduino</h1>
+                <p>Inspiring the next generation of innovators through hands-on robotics education</p>
+            </section>
+
+            <!-- Why Join Our Academy Section -->
+            <section class="why-join">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Why Join <span class="highlight">Code and Circuit </span> Academy?</h2>
+                        <p class="subtitle">Discover what makes our robotics education program truly exceptional</p>
+                    </div>
+
+                    <div class="benefits-container">
+                        <!-- Benefit 1 -->
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <div class="icon-circle personal-attention">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Personal Attention</h3>
+                                <p>As the sole instructor, I provide dedicated one-on-one guidance to each student. Your child will never be just another face in the crowd, but a valued individual whose progress I personally monitor and support.</p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 2 -->
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <div class="icon-circle results">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Results-Oriented Approach</h3>
+                                <p>Our curriculum is designed to deliver measurable outcomes. From day one, students build functional projects that demonstrate their growing skills, culminating in a portfolio of impressive Arduino creations they can proudly showcase.</p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 3 -->
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <div class="icon-circle passion">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Passion for Teaching</h3>
+                                <p>I bring genuine enthusiasm to every class. My love for robotics and teaching creates an engaging environment where students become naturally curious and motivated to explore, experiment, and excel.</p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 4 -->
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <div class="icon-circle practical">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Hands-On Learning</h3>
+                                <p>Theory meets practice in our project-based curriculum. Students learn by doing – building circuits, programming microcontrollers, and developing real-world applications that bridge the gap between classroom concepts and practical skills.</p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 5 -->
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <div class="icon-circle customized">
+                                    <i class="fas fa-sliders-h"></i>
+                                </div>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Customized Learning Paths</h3>
+                                <p>Every student has different strengths, interests, and learning styles. Our program adapts to individual needs, allowing students to progress at their optimal pace while focusing on areas that ignite their particular passion.</p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 6 -->
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <div class="icon-circle community">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Supportive Community</h3>
+                                <p>Beyond classes, students join a community of like-minded peers who share their interest in technology. Through collaborative projects and our dedicated communication channels, they build connections that extend beyond the classroom.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="join-cta">
+                        <p>Ready to begin your child's journey into the exciting world of robotics?</p>
+                        <a href="contact.html" class="cta-button">Enroll Today</a>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            
+            <!-- Modern Why Join Our Academy Section -->
+            <section class="why-join-modern">
+                <div class="container">
+                    <div class="hero-statement">
+                        <h2>We inspire young minds to master robotics through <span class="highlight">hands-on learning</span></h2>
+                    </div>
+                    
+                    <div class="benefits-grid">
+                        <!-- Benefit 1 -->
+                        <div class="benefit-box">
+                            <div class="benefit-icon">
+                                <div class="icon-bg personal">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <h3>Personal Attention</h3>
+                            <p>One-on-one guidance ensures each student receives the dedicated support they need to excel</p>
+                        </div>
+                        
+                        <!-- Benefit 2 -->
+                        <div class="benefit-box">
+                            <div class="benefit-icon">
+                                <div class="icon-bg results">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                            </div>
+                            <h3>Results-Oriented Approach</h3>
+                            <p>Build impressive projects that demonstrate real growth and technical mastery</p>
+                        </div>
+                        
+                        <!-- Benefit 3 -->
+                        <div class="benefit-box">
+                            <div class="benefit-icon">
+                                <div class="icon-bg passion">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                            </div>
+                            <h3>Passion for Teaching</h3>
+                            <p>Learn in an enthusiastic environment that sparks curiosity and fosters genuine interest</p>
+                        </div>
+                        
+                        <!-- Benefit 4 -->
+                        <div class="benefit-box">
+                            <div class="benefit-icon">
+                                <div class="icon-bg community">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                            </div>
+                            <h3>Supportive Community</h3>
+                            <p>Connect with like-minded peers who share your interest in technology and innovation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-section">
+                        <a href="courses.html" class="cta-button">Explore Our Courses</a>
+                    </div>
+                </div>
+            </section>
 
-        <section id="cta" class="cta">
-            <div class="container">
-                <h2>Ready to Start Your Robotics Journey?</h2>
-                <p>Join thousands of students who have transformed their passion for robotics into valuable skills and exciting careers.</p>
-                <a href="courses.html" class="btn">Enroll Now</a>
-            </div>
-        </section>
+                        <!-- Our Courses Section -->
+            <!-- Our Courses Section (Updated for Homepage) -->
+            <section class="courses">
+                <h2>Our Courses</h2>
+                <div class="course-cards">
+                    <div class="course">
+                        <h3>Arduino Beginner Module</h3>
+                        <p>Duration: 6 Months</p>
+                        <div class="course-details">
+                            <p>Learn the fundamentals of Arduino programming and electronics. Perfect for students with no prior experience.</p>
+                            <ul>
+                                <li>Basic electronics concepts</li>
+                                <li>Programming fundamentals</li>
+                                <li>Working with sensors</li>
+                                <li>Capstone project</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="course">
+                        <h3>Arduino Intermediate Module</h3>
+                        <p>Duration: 6 Months</p>
+                        <div class="course-details">
+                            <p>Advance your skills with more complex projects and technologies.</p>
+                            <ul>
+                                <li>Advanced sensors & displays</li>
+                                <li>Motors and motion control</li>
+                                <li>Wireless communication</li>
+                                <li>Intermediate capstone project</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="course">
+                        <h3>Arduino Advanced Module</h3>
+                        <p>Duration: 6 Months</p>
+                        <div class="course-details">
+                            <p>Master professional-level Arduino development and IoT applications.</p>
+                            <ul>
+                                <li>IoT and cloud integration</li>
+                                <li>Custom hardware design</li>
+                                <li>Advanced communications</li>
+                                <li>Professional capstone project</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-pricing-preview">
+                    <h3>Module Pricing Options</h3>
+                    <div class="pricing-preview">
+                        <div class="pricing-option beginner">
+                            <h4>Beginner Module</h4>
+                            <p class="price">RM 486/month</p>
+                            <p>Perfect for starters</p>
+                        </div>
+                        <div class="pricing-option intermediate">
+                            <h4>Intermediate Module</h4>
+                            <p class="price">RM 378/month</p>
+                            <p>For growing skills</p>
+                        </div>
+                        <div class="pricing-option advanced">
+                            <h4>Advanced Module</h4>
+                            <p class="price">RM 1566/month</p>
+                            <p>Master-level training</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-cta">
+                    <a href="courses.html" class="course-details-button">View Full Curriculum</a>
+                </div>
+            </section>
 
-        <section id="newsletter" class="main-content">
-            <h2 class="section-title">Stay Updated</h2>
-            <div class="newsletter-container">
-                <p>Subscribe to our newsletter to receive updates on new courses, robotics trends, and special offers.</p>
-                <form id="newsletter-form">
-                    <input type="email" placeholder="Your email address" required>
-                    <button type="submit" class="btn">Subscribe</button>
+            <!-- About Us Section -->
+            <section class="about-us">
+                <h2>Who We Are</h2>
+                <div class="team">
+                    <p>Our team consists of experienced engineers, educators, and robotics enthusiasts who are passionate about sharing their knowledge with the next generation.</p>
+                    <!-- Team members can be added here -->
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact">
+                <h2>Contact Us</h2>
+                <form>
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+                    <textarea placeholder="Your Message"></textarea>
+                    <button type="submit">Send Message</button>
                 </form>
+            </section>
+        </div>
+    </main>
+    
+     <!-- Google Form Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Book Your Session</h2>
+            <div class="iframe-container">
+                <iframe id="google-form-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSc3uYpjhXYbSPsxyh4KB2axkWartHOBG7wue50BOCALjjkF4g/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
-        </section>
+        </div>
     </div>
 
-    <!-- Footer (copy from above) -->
     <footer>
         <div class="container">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>TechBot Robotics</h3>
-                    <p>Building the future through robotics education and innovation.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="team.html">Our Team</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="projects.html">Student Projects</a></li>
-                        <li><a href="hardware.html">Hardware Kits</a></li>
-                        <li><a href="tutorials.html">Free Tutorials</a></li>
-                        <li><a href="careers.html">Career Resources</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Policies</h3>
-                    <ul>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="refund.html">Refund Policy</a></li>
-                        <li><a href="conduct.html">Code of Conduct</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 TechBot Robotics Academy. All rights reserved.</p>
-            </div>
+            <p>&copy; 2025 Robotics Class. All rights reserved.</p>
         </div>
-    </footer>
+    </footer>   
 
-    <script src="script.js"></script>
-    <script src="language.js"></script>
+    <!-- Load JavaScript at the end of the body for better performance -->
+    <script src="js\main.js"></script>
 </body>
 </html>

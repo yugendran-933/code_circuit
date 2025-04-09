@@ -36,7 +36,7 @@
                         <option value="zh">中文</option>
                     </select>
                 </div>
-                <a href="#pricing" class="book-button">Book</a>
+                <a href="#" class="book-button">Book</a>
             </div>
             
             <!-- Mobile menu toggle button -->
@@ -293,90 +293,12 @@
                 </div>
             </section>
 
-            <!-- Pricing Section -->
-            <section id="pricing" class="pricing-section">
-                <h2>Group Plan</h2>
-                <p class="section-subtitle">Choose the right plan!</p>
-                
-                <div class="pricing-container">
-                    <!-- Beginner Module Plan -->
-                    <div class="pricing-card beginner">
-                        <div class="pricing-image">
-                            <img src="Images/individual-plan.jpg" alt="Beginner class">
-                        </div>
-                        <div class="pricing-content">
-                            <h3>Beginner Module</h3>
-                            <p class="pricing-tagline">Perfect for Starters</p>
-                            <p class="pricing-description">Learn the fundamentals of Arduino programming and electronics. Build your first circuits and understand programming basics through hands-on projects.</p>
-                            
-                            <div class="pricing-details">
-                                <p class="duration">Duration: 1 Hour Per Session</p>
-                                <div class="pricing-options">
-                                    <span class="option">24 Sessions</span>
-                                    <span class="option">6 Months</span>
-                                </div>
-                            </div>
-                            
-                            <div class="pricing-price">
-                                <p class="price-label">Monthly</p>
-                                <p class="price">RM 486</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Intermediate Module Plan -->
-                    <div class="pricing-card intermediate">
-                        <div class="pricing-image">
-                            <img src="Images\esp32.png" alt="Intermediate class">
-                        </div>
-                        <div class="pricing-content">
-                            <h3>Intermediate Module</h3>
-                            <p class="pricing-tagline">For Growing Skills</p>
-                            <p class="pricing-description">Advance your Arduino knowledge with sensors, motors, and wireless communication. Create more complex interactive projects and robotics applications.</p>
-                            
-                            <div class="pricing-details">
-                                <p class="duration">Duration: 1 Hour Per Session</p>
-                                <div class="pricing-options">
-                                    <span class="option">24 Sessions</span>
-                                    <span class="option">6 Months</span>
-                                </div>
-                            </div>
-                            
-                            <div class="pricing-price">
-                                <p class="price-label">Monthly</p>
-                                <p class="price">RM 378</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Advanced Module Plan -->
-                    <div class="pricing-card advanced">
-                        <div class="pricing-image">
-                            <img src="Images/studio.png" alt="Advanced class">
-                        </div>
-                        <div class="pricing-content">
-                            <h3>Advanced Module</h3>
-                            <p class="pricing-tagline">Master-Level Training</p>
-                            <p class="pricing-description">Master professional IoT applications, custom hardware design, and advanced system integration. Develop industry-ready skills with complex Arduino projects.</p>
-                            
-                            <div class="pricing-details">
-                                <p class="duration">Duration: 1 Hour Per Session</p>
-                                <div class="pricing-options">
-                                    <span class="option">24 Sessions</span>
-                                    <span class="option">6 Months</span>
-                                </div>
-                            </div>
-                            
-                            <div class="pricing-price">
-                                <p class="price-label">Monthly</p>
-                                <p class="price">RM 1566</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
+            <!-- Call to Action Section (Replacing Pricing) -->
+            <section id="enroll" class="cta-section">
                 <div class="cta-container">
-                    <a href="contact.html" class="cta-button">Enroll Now</a>
+                    <h2>Ready to Start Your Arduino Journey?</h2>
+                    <p class="section-subtitle">Contact us today to learn more about our programs and schedule a free trial class</p>
+                    <a href="contact.html" class="cta-button">Get More Information</a>
                 </div>
             </section>
         </div>
@@ -390,5 +312,65 @@
 
     <!-- Load JavaScript at the end of the body for better performance -->
     <script src="js/main.js"></script>
+
+    <style>
+        /* Styling for the new CTA section (replaces pricing) */
+        .cta-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            color: #4a00b0;
+            margin-bottom: 10px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #4a00b0;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(74, 0, 176, 0.2);
+        }
+        
+        .cta-button:hover {
+            background-color: #8a2be2;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(74, 0, 176, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem;
+            }
+            
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </body>
 </html>

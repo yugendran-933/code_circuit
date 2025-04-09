@@ -911,3 +911,335 @@ footer {
 /* Font Awesome import for icons */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
+/* Additional styles for Contact page */
+
+/* Contact Information Section */
+.contact-info-section {
+    padding: 60px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 60px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.contact-method {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-method:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    background-color: #f9f9f9;
+}
+
+.contact-icon {
+    font-size: 28px;
+    color: #4a00b0;
+    margin-bottom: 20px;
+}
+
+.contact-method h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.contact-method p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.hours {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #4a00b0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    background-color: #8a2be2;
+}
+
+/* Contact Links */
+.contact-link {
+    color: #4a00b0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #8a2be2;
+    text-decoration: underline;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-button i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+}
+
+/* Map Section */
+.map-section {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.map-section h2 {
+    text-align: center;
+    color: #4a00b0;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.google-map {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.map-overlay {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10;
+}
+
+.map-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 300px;
+}
+
+.map-info h3 {
+    color: #4a00b0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.map-info p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.map-info i {
+    color: #4a00b0;
+    margin-right: 8px;
+}
+
+.directions-link {
+    color: #4a00b0;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.directions-link:hover {
+    color: #8a2be2;
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-bottom: 60px;
+}
+
+.faq-section h2 {
+    text-align: center;
+    color: #4a00b0;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.faq-toggle {
+    font-size: 14px;
+    color: #4a00b0;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 20px 20px;
+    max-height: 1000px;
+}
+
+.faq-answer p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .map-overlay {
+        position: static;
+        margin-top: 20px;
+    }
+    
+    .map-info {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-question h3 {
+        font-size: 1.1rem;
+    }
+
+    .google-map {
+        height: 350px;
+    }
+}
+
+     /* New styles for course highlights (replacing pricing) */
+        .course-highlights {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 900px;
+        }
+        
+        .course-highlights h3 {
+            color: #4a00b0;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .highlight-item {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            background-color: #f8f9fa;
+        }
+        
+        .highlight-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .highlight-icon {
+            font-size: 32px;
+            color: #4a00b0;
+            margin-bottom: 15px;
+        }
+        
+        .highlight-item h4 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .highlight-item p {
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .highlights-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .course-highlights {
+                padding: 30px 20px;
+            }
+        }

@@ -1,0 +1,413 @@
+/*==============================================
+  ABOUT PAGE - STYLESHEET
+  
+  Table of Contents:
+  1. About Section
+  2. Team Section
+  3. Approach Section
+  4. Testimonials Section
+  5. Partners Section
+  6. CTA Section
+  7. Responsive Adaptations
+==============================================*/
+
+/* Import color variables */
+@import url('colors.css');
+
+/*----------------------------------------------
+  1. ABOUT SECTION
+----------------------------------------------*/
+.about-section {
+    margin-bottom: 60px;
+    padding: 40px 0;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.rounded-img {
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+}
+
+/*----------------------------------------------
+  2. TEAM SECTION
+----------------------------------------------*/
+.team-section {
+    padding: 40px 0;
+    margin-bottom: 60px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member {
+    background-color: var(--bg-primary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.member-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-info {
+    padding: 20px;
+}
+
+.member-info h3 {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+}
+
+.member-title {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.member-contact {
+    display: flex;
+    gap: 15px;
+}
+
+.member-contact a {
+    color: var(--primary);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.member-contact a:hover {
+    color: var(--primary-light);
+}
+
+/*----------------------------------------------
+  3. APPROACH SECTION
+----------------------------------------------*/
+.approach-section {
+    padding: 40px 0;
+    margin-bottom: 60px;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.approach-item {
+    background-color: var(--bg-primary);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.approach-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.approach-icon {
+    font-size: 40px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.approach-item h3 {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.approach-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/*----------------------------------------------
+  4. TESTIMONIALS SECTION
+----------------------------------------------*/
+.testimonials-section {
+    padding: 40px 0;
+    margin-bottom: 60px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonial {
+    background-color: var(--bg-primary);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    position: relative;
+}
+
+.testimonial::before {
+    content: """;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 80px;
+    color: var(--primary);
+    opacity: 0.1;
+    font-family: serif;
+    line-height: 1;
+}
+
+.testimonial-content {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.testimonial-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+/*----------------------------------------------
+  5. PARTNERS SECTION
+----------------------------------------------*/
+.partners-section {
+    padding: 40px 0;
+    margin-bottom: 60px;
+}
+
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.partner-logo {
+    flex: 0 0 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--bg-primary);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+    transform: scale(1.05);
+}
+
+.partner-logo img {
+    max-width: 100%;
+    max-height: 80px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.partner-logo:hover img {
+    filter: grayscale(0%);
+}
+
+/*----------------------------------------------
+  6. CTA SECTION
+----------------------------------------------*/
+.cta-section {
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 60px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--shadow-medium);
+}
+
+.cta-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.book-button {
+    display: inline-block;
+    background-color: white;
+    color: var(--primary);
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.book-button:hover {
+    background-color: var(--bg-secondary);
+    transform: translateY(-3px);
+}
+
+.outline-button {
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.outline-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+/*----------------------------------------------
+  7. RESPONSIVE ADAPTATIONS
+----------------------------------------------*/
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .testimonials-container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-grid,
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-section,
+    .team-section,
+    .approach-section,
+    .testimonials-section,
+    .partners-section {
+        padding: 30px 0;
+    }
+    
+    .team-member {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .partners-grid {
+        gap: 20px;
+    }
+    
+    .partner-logo {
+        flex: 0 0 150px;
+    }
+    
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-section p {
+        font-size: 1rem;
+    }
+}

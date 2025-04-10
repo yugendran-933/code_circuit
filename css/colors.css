@@ -1,0 +1,70 @@
+/*==============================================
+  COLOR VARIABLES - ROBOTICS CLASS WEBSITE
+  
+  This file defines all color variables used throughout 
+  the website to maintain consistency and simplify updates.
+==============================================*/
+
+:root {
+    /* Primary Brand Colors */
+    --primary: #4a00b0;         /* Main purple, used for headings, buttons, etc. */
+    --primary-light: #8a2be2;   /* Lighter purple for hover states */
+    --primary-dark: #3a0087;    /* Darker purple */
+    
+    /* Secondary Brand Colors */
+    --secondary: #ff5722;       /* Orange accent, used for highlights and CTAs */
+    --secondary-light: #ff8a50; /* Lighter orange */
+    --secondary-dark: #c41c00;  /* Darker orange */
+    
+    /* Text Colors */
+    --text-primary: #333333;    /* Main text color */
+    --text-secondary: #666666;  /* Secondary text color */
+    --text-muted: #777777;      /* Muted text like dates, times */
+    --text-light: #aaaaaa;      /* Very light text */
+    
+    /* Background Colors */
+    --bg-primary: #ffffff;      /* Main white background */
+    --bg-secondary: #f9f9f9;    /* Light gray background used in many sections */
+    --bg-alt: #f0f7ff;          /* Alternate light blue background for "Why Join" */
+    --bg-footer: #333333;       /* Dark footer background */
+    
+    /* Border and Shadow Colors */
+    --border-light: #eeeeee;    /* Light borders */
+    --shadow-light: rgba(0, 0, 0, 0.05); /* Light shadows */
+    --shadow-medium: rgba(0, 0, 0, 0.1);  /* Medium shadows */
+    --shadow-dark: rgba(0, 0, 0, 0.2);    /* Darker shadows */
+    
+    /* Overlay Colors */
+    --overlay-dark: rgba(0, 0, 0, 0.5);  /* Dark overlay for modals */
+    
+    /* Module-specific Colors */
+    --beginner: #4a00b0;        /* Beginner module color (same as primary) */
+    --intermediate: #8a2be2;    /* Intermediate module color */
+    --advanced: #ff6b6b;        /* Advanced module color */
+    
+    /* Icon Background Colors */
+    --icon-personal: #4a00b0;   /* Personal attention icon */
+    --icon-results: #ff5722;    /* Results-oriented icon */
+    --icon-passion: #e91e63;    /* Passion for teaching icon */
+    --icon-community: #00bcd4;  /* Supportive community icon */
+    
+    /* Social Media */
+    --whatsapp: #25D366;        /* WhatsApp color */
+    --whatsapp-dark: #128C7E;   /* WhatsApp hover color */
+    
+    /* States */
+    --hover-bg: #e6e6e6;        /* Hover background for dropdown */
+    --active-bg: #f1f1f1;       /* Active background for items */
+  }
+  
+  /* How to use:
+     
+     Simply replace color hex values in your CSS with var(--variable-name).
+     
+     Example:
+     .my-element {
+       color: var(--primary);
+       background-color: var(--bg-secondary);
+       box-shadow: 0 4px 15px var(--shadow-light);
+     }
+  */

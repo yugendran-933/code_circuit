@@ -1,17 +1,30 @@
+/*==============================================
+  WHY JOIN SECTION - STYLESHEET
+  
+  Table of Contents:
+  1. Main Container and Background
+  2. Hero Statement
+  3. Benefits Grid
+    3.1. Benefit Boxes
+    3.2. Icon Elements
+  4. Call-to-Action Button
+  5. Responsive Adaptations
+==============================================*/
 
+/* Import color variables */
+@import url('colors.css');
 
-/* CONTACT PAGE STYLES */
-
-/* Modern Why Join Section Styles */
-
+/*----------------------------------------------
+  1. MAIN CONTAINER AND BACKGROUND
+----------------------------------------------*/
 .why-join-modern {
     padding: 100px 0;
-    background-color: #f0f7ff;
+    background-color: var(--bg-alt);
     position: relative;
     overflow: hidden;
 }
 
-/* Background elements */
+/* Background decorative elements */
 .why-join-modern::before {
     content: '';
     position: absolute;
@@ -42,7 +55,9 @@
     padding: 0 20px;
 }
 
-/* Hero statement */
+/*----------------------------------------------
+  2. HERO STATEMENT
+----------------------------------------------*/
 .hero-statement {
     text-align: center;
     margin-bottom: 80px;
@@ -51,14 +66,14 @@
 .hero-statement h2 {
     font-size: 2.8rem;
     line-height: 1.3;
-    color: #333;
+    color: var(--text-primary);
     max-width: 900px;
     margin: 0 auto;
     font-weight: 700;
 }
 
 .hero-statement .highlight {
-    color: #4a00b0;
+    color: var(--primary);
     position: relative;
 }
 
@@ -69,11 +84,13 @@
     left: 0;
     right: 0;
     height: 3px;
-    background-color: #4a00b0;
+    background-color: var(--primary);
     opacity: 0.3;
 }
 
-/* Benefits grid */
+/*----------------------------------------------
+  3. BENEFITS GRID
+----------------------------------------------*/
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -81,20 +98,34 @@
     margin-bottom: 60px;
 }
 
+/* 3.1. Benefit Boxes */
 .benefit-box {
-    background-color: white;
+    background-color: var(--bg-primary);
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px var(--shadow-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
 }
 
 .benefit-box:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 40px var(--shadow-medium);
 }
 
+.benefit-box h3 {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.benefit-box p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* 3.2. Icon Elements */
 .benefit-icon {
     margin-bottom: 25px;
 }
@@ -111,20 +142,21 @@
     position: relative;
 }
 
+/* Icon color variations */
 .icon-bg.personal {
-    background-color: #4a00b0;
+    background-color: var(--icon-personal);
 }
 
 .icon-bg.results {
-    background-color: #ff5722;
+    background-color: var(--icon-results);
 }
 
 .icon-bg.passion {
-    background-color: #e91e63;
+    background-color: var(--icon-passion);
 }
 
 .icon-bg.community {
-    background-color: #00bcd4;
+    background-color: var(--icon-community);
 }
 
 /* Icon glow effect */
@@ -142,38 +174,28 @@
 }
 
 .icon-bg.personal::before {
-    background-color: #4a00b0;
+    background-color: var(--icon-personal);
 }
 
 .icon-bg.results::before {
-    background-color: #ff5722;
+    background-color: var(--icon-results);
 }
 
 .icon-bg.passion::before {
-    background-color: #e91e63;
+    background-color: var(--icon-passion);
 }
 
 .icon-bg.community::before {
-    background-color: #00bcd4;
+    background-color: var(--icon-community);
 }
 
 .benefit-box:hover .icon-bg::before {
     opacity: 0.4;
 }
 
-.benefit-box h3 {
-    font-size: 1.4rem;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.benefit-box p {
-    color: #666;
-    line-height: 1.6;
-    font-size: 1rem;
-}
-
-/* CTA section */
+/*----------------------------------------------
+  4. CALL-TO-ACTION BUTTON
+----------------------------------------------*/
 .cta-section {
     text-align: center;
     margin-top: 40px;
@@ -181,7 +203,7 @@
 
 .cta-button {
     display: inline-block;
-    background-color: #4a00b0;
+    background-color: var(--primary);
     color: white;
     padding: 16px 40px;
     border-radius: 50px;
@@ -189,16 +211,18 @@
     font-size: 1.1rem;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(74, 0, 176, 0.3);
+    box-shadow: 0 5px 15px var(--shadow-medium);
 }
 
 .cta-button:hover {
-    background-color: #5c14c9;
+    background-color: var(--primary-light);
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(74, 0, 176, 0.4);
+    box-shadow: 0 8px 25px var(--shadow-dark);
 }
 
-/* Responsive Adjustments */
+/*----------------------------------------------
+  5. RESPONSIVE ADAPTATIONS
+----------------------------------------------*/
 @media (max-width: 992px) {
     .hero-statement h2 {
         font-size: 2.4rem;

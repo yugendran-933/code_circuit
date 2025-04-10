@@ -242,6 +242,24 @@ nav ul li a:hover,
     align-items: center;
 }
 
+.mobile-book {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-book {
+        display: inline-block;
+        margin-left: 10px;
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .mobile-controls {
+        display: flex;
+        align-items: center;
+    }
+}
+
 /*----------------------------------------------
   4. HERO SECTION
 ----------------------------------------------*/

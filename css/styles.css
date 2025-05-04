@@ -23,6 +23,11 @@
 /* Import color variables */
 @import url('colors.css');
 
+section {
+    /* adds space above & below every section */
+    padding: 3rem 0;
+  }
+  
 /*----------------------------------------------
   1. RESET & GLOBAL STYLES
 ----------------------------------------------*/
@@ -219,27 +224,16 @@ nav ul li a:hover,
 }
 
 /* 3.5. Mobile Menu */
-.mobile-menu-toggle {
+/*==============================================
+  MOBILE STYLES UPDATE
+  
+  Add this to the end of your styles.css file to implement
+  the mobile book button
+==============================================*/
+
+/* Mobile Controls */
+.mobile-controls {
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-    cursor: pointer;
-}
-
-.mobile-menu-toggle span {
-    height: 3px;
-    width: 100%;
-    background-color: var(--text-primary);
-    border-radius: 3px;
-    transition: all 0.3s ease;
-}
-
-/* Header controls container */
-.header-controls, .nav-right {
-    display: flex;
-    align-items: center;
 }
 
 .mobile-book {
@@ -247,6 +241,11 @@ nav ul li a:hover,
 }
 
 @media (max-width: 768px) {
+    .mobile-controls {
+        display: flex;
+        align-items: center;
+    }
+    
     .mobile-book {
         display: inline-block;
         margin-left: 10px;
@@ -254,9 +253,33 @@ nav ul li a:hover,
         font-size: 0.9rem;
     }
     
-    .mobile-controls {
-        display: flex;
-        align-items: center;
+    .header .container {
+        padding: 15px;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    /* When mobile menu is active */
+    .main-nav.active {
+        display: block;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-primary);
+        box-shadow: 0 4px 8px var(--shadow-light);
+        z-index: 100;
+    }
+    
+    .main-nav.active ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .main-nav.active li {
+        margin: 10px 0;
     }
 }
 
@@ -804,3 +827,82 @@ footer {
         margin: 10px 0;
     }
 }
+
+/* Hero with a more horizontal diagonal image */
+.hero-diag {
+    display: grid;
+    grid-template-columns: 35% 65%;  /* more room for the image */
+    min-height: 60vh;                /* a slightly shorter, wider feel */
+    overflow: hidden;
+}
+
+/* Text side */
+.hero-content {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--white);
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: var(--text);
+}
+.hero-content .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+/* ↓ NEW: scroll cue under the CTA ↓ */
+.hero-content .scroll-cue {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    opacity: 0.75;
+    text-align: center;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100%   { transform: translateY(0); }
+    50%        { transform: translateY(5px); }
+}
+
+/* Image side */
+.hero-image {
+    position: relative;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+    /* 30% flattens the diagonal for a gentler, more horizontal angle */
+}
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.btn-primary {
+    display: inline-flex;           /* make it a flex container */
+    justify-content: center;        /* center horizontally */
+    align-items: center;            /* center vertically */
+    text-align: center;             /* fallback for non-flex browsers */
+    background-color: var(--brand-purple);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+  }
+  
+
+  
+  

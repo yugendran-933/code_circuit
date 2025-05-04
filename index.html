@@ -53,10 +53,10 @@
                         <option value="">Language</option>
                         <option value="en">English</option>
                         <option value="bm">Malay</option>
-                        <option value="ta">தமிழஂ</option>
+                        <option value="ta">தமிழ்</option>
                     </select>
                 </div>
-                <a href="#" class="book-button">Book</a>
+                <a href="#" class="book-button open-booking-modal">Book</a>
             </div>
             
             <!-- Mobile Menu Toggle Button -->
@@ -66,7 +66,7 @@
                     <span></span>
                     <span></span>
                 </div>
-                <a href="#" class="book-button mobile-book">Book</a>
+                <a href="#" class="book-button mobile-book open-booking-modal">Book</a>
             </div>
         </div>
     </header>
@@ -75,71 +75,122 @@
     <main>
         <div class="container">
             <!-- Hero Section -->
-            <section class="hero">
-                <h1>Learn Robotics with Arduino</h1>
-                <p>Inspiring the next generation of innovators through hands-on robotics education</p>
-            </section>
-
-            <!-- Why Join Our Academy Section -->
-            <section class="why-join-modern">
+            <section class="hero-diag">
+                <div class="hero-content">
+                  <h1>Ignite Your Child’s Passion for Robotics</h1>
+                  <p>
+                    Hands-on Arduino &amp; robotics classes for curious kids ages 8–16.  
+                    Small groups, expert mentors, and all gear included—no experience needed.
+                  </p>
+                  <a href="#" class="btn btn-primary open-booking-modal">
+                    Book a FREE Trial Class
+                  </a>                  
+                  <div class="scroll-cue">
+                    ↓ Discover our 3-level curriculum, meet Jason &amp; team, and book a free trial ↓
+                  </div>
+                </div>
+                <div class="hero-image">
+                  <img
+                    src="Images/father-sons-making-robot.jpg"
+                    alt="Instructor guiding two kids building a robot"
+                  />
+                </div>
+            </section>      
+              
+                    <!-- ✨ NEW: Why Robotics Is the Best Gift You Can Give Your Child -->
+            <section class="why-robotics">
                 <div class="container">
-                    <div class="section-header">
-                        <h2>Why Join <span class="highlight">Code and Circuit </span> Academy?</h2>
-                        <p class="subtitle">Discover what makes our robotics education program truly exceptional</p>
+                <div class="section-header">
+                    <h2>Why <span class="highlight">Robotics</span> Is the Best Gift You Can Give Your Child</h2>
+                    <p class="subtitle">Six parent-approved reasons, backed by science & common sense</p>
+                </div>
+            
+                <div class="benefits-grid">
+                    <!-- Screen-free hobby -->
+                    <div class="benefit-box">
+                    <div class="benefit-icon"><div class="icon-bg personal"><i class="fas fa-mobile-alt"></i></div></div>
+                    <h3>A Healthy Break from Screens</h3>
+                    <p>Weekly sessions where phones are swapped for pliers, LEDs & laughter.</p>
                     </div>
-                    <div class="benefits-grid">
-                        <!-- Benefit 1: Personal Attention -->
-                        <div class="benefit-box">
-                            <div class="benefit-icon">
-                                <div class="icon-bg personal">
-                                    <i class="fas fa-user"></i>
-                                </div>
-                            </div>
-                            <h3>Personal Attention</h3>
-                            <p>One-on-one guidance ensures each student receives the dedicated support they need to excel</p>
-                        </div>
-                        
-                        <!-- Benefit 2: Results-Oriented Approach -->
-                        <div class="benefit-box">
-                            <div class="benefit-icon">
-                                <div class="icon-bg results">
-                                    <i class="fas fa-trophy"></i>
-                                </div>
-                            </div>
-                            <h3>Results-Oriented Approach</h3>
-                            <p>Build impressive projects that demonstrate real growth and technical mastery</p>
-                        </div>
-                        
-                        <!-- Benefit 3: Passion for Teaching -->
-                        <div class="benefit-box">
-                            <div class="benefit-icon">
-                                <div class="icon-bg passion">
-                                    <i class="fas fa-heart"></i>
-                                </div>
-                            </div>
-                            <h3>Passion for Teaching</h3>
-                            <p>Learn in an enthusiastic environment that sparks curiosity and fosters genuine interest</p>
-                        </div>
-                        
-                        <!-- Benefit 4: Supportive Community -->
-                        <div class="benefit-box">
-                            <div class="benefit-icon">
-                                <div class="icon-bg community">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                            </div>
-                            <h3>Supportive Community</h3>
-                            <p>Connect with like-minded peers who share your interest in technology and innovation</p>
-                        </div>
+            
+                    <!-- Social skills -->
+                    <div class="benefit-box">
+                    <div class="benefit-icon"><div class="icon-bg community"><i class="fas fa-users"></i></div></div>
+                    <h3>Real-World Social Skills</h3>
+                    <p>Team builds &amp; friendly robot battles pull kids out of “solo-gaming mode”.</p>
                     </div>
-                    
-                    <!-- Call to Action -->
-                    <div class="cta-section">
-                        <a href="courses.html" class="cta-button">Explore Our Courses</a>
+            
+                    <!-- Logic / grades -->
+                    <div class="benefit-box">
+                    <div class="benefit-icon"><div class="icon-bg results"><i class="fas fa-brain"></i></div></div>
+                    <h3>Turbo-Charged Logic &amp; Maths</h3>
+                    <p>Early coding + circuits strengthen the analytical muscles that lift school grades.</p>
+                    </div>
+            
+                    <!-- Future innovator -->
+                    <div class="benefit-box">
+                    <div class="benefit-icon"><div class="icon-bg passion"><i class="fas fa-lightbulb"></i></div></div>
+                    <h3>Future-Proof Innovators</h3>
+                    <p>Your child starts the journey today’s inventors &amp; engineers once took.</p>
+                    </div>
+            
+                    <!-- Ahead of peers -->
+                    <div class="benefit-box">
+                    <div class="benefit-icon"><div class="icon-bg personal"><i class="fas fa-rocket"></i></div></div>
+                    <h3>A Step Ahead of Classmates</h3>
+                    <p>While others only <em>consume</em> tech, your child learns to <em>create</em> it.</p>
+                    </div>
+            
+                    <!-- AI era -->
+                    <div class="benefit-box">
+                    <div class="benefit-icon"><div class="icon-bg community"><i class="fas fa-robot"></i></div></div>
+                    <h3>Ready for the AI Era</h3>
+                    <p>Robotics is the playground where tomorrow’s AI thinkers cut their teeth.</p>
                     </div>
                 </div>
+                </div>
             </section>
+            
+            <!-- 🆕  Swap the content INSIDE your existing why-join-modern  -->
+            <section class="why-join-modern">
+                <div class="container">
+                <div class="section-header">
+                    <h2>Why Parents Choose <span class="highlight">Code &amp; Circuit Academy</span></h2>
+                    <p class="subtitle">Four promises that set us apart from every “copy-paste” coding club</p>
+                </div>
+            
+                <div class="benefits-grid">
+                    <div class="benefit-box">
+                    <div class="benefit-icon"><div class="icon-bg personal"><i class="fas fa-user-friends"></i></div></div>
+                    <h3>Tiny Class Size—Max 12 Learners</h3>
+                    <p>Every child gets personal guidance; no-one’s lost in the crowd.</p>
+                    </div>
+            
+                    <div class="benefit-box">
+                    <div class="benefit-icon"><div class="icon-bg results"><i class="fas fa-hands"></i></div></div>
+                    <h3>100 % Hands-On, Zero Simulations</h3>
+                    <p>Kids build <strong>real</strong> robots they can hold, test &amp; show you.</p>
+                    </div>
+            
+                    <div class="benefit-box">
+                    <div class="benefit-icon"><div class="icon-bg passion"><i class="fas fa-microphone"></i></div></div>
+                    <h3>Monthly Show-and-Tell + Demo Day</h3>
+                    <p>Regular presentations turn shy tinkerers into confident speakers.</p>
+                    </div>
+            
+                    <div class="benefit-box">
+                    <div class="benefit-icon"><div class="icon-bg community"><i class="fas fa-language"></i></div></div>
+                    <h3>Trilingual Mentoring (EN | BM | 中文)</h3>
+                    <p>Concepts click faster when explained in each child’s strongest language.</p>
+                    </div>
+                </div>
 
+                <div class="cta-section">
+                    <a href="#" id="open-booking-modal" class="cta-button">Book a FREE Trial Class</a>
+                </div>
+                </div>
+            </section>
+    
             <!-- Our Courses Section -->
             <section class="courses">
                 <h2>Our Courses</h2>
@@ -190,34 +241,6 @@
                     </div>
                 </div>
                 
-                <!-- Course Highlights Section -->
-                <div class="course-highlights">
-                    <h3>Program Highlights</h3>
-                    <div class="highlights-grid">
-                        <div class="highlight-item">
-                            <div class="highlight-icon">
-                                <i class="fas fa-calendar-alt"></i>
-                            </div>
-                            <h4>Weekly Sessions</h4>
-                            <p>1-hour classes every week</p>
-                        </div>
-                        <div class="highlight-item">
-                            <div class="highlight-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h4>Small Class Size</h4>
-                            <p>Maximum 8 students per class</p>
-                        </div>
-                        <div class="highlight-item">
-                            <div class="highlight-icon">
-                                <i class="fas fa-tools"></i>
-                            </div>
-                            <h4>All Equipment Provided</h4>
-                            <p>Arduino kits and components included</p>
-                        </div>
-                    </div>
-                </div>
-                
                 <!-- Course CTA -->
                 <div class="course-cta">
                     <a href="courses.html" class="course-details-button">View Full Curriculum</a>
@@ -239,7 +262,7 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h3>Visit Us</h3>
-                        <p>123 Innovation Street<br>Tech District<br>Kuala Lumpur, 50450</p>
+                        <p>184 Lorong Kenari 4<br>Taman Kenari <br>09000 Kulim Kedah</p>
                         <a href="#map-section" class="contact-link">View on Map</a>
                     </div>
                     
@@ -253,7 +276,7 @@
                         <a href="https://wa.me/60312345678" class="whatsapp-button">
                             <i class="fab fa-whatsapp"></i> Chat on WhatsApp
                         </a>
-                        <p class="hours">Monday - Friday: 9am - 6pm<br>Saturday: 9am - 2pm</p>
+                        <p class="hours">Monday - Friday: 6pm - 9pm <br> Saturday - Sunday : 9am - 9pm</p>
                     </div>
                     
                     <!-- Email Us -->
@@ -263,11 +286,9 @@
                         </div>
                         <h3>Email Us</h3>
                         <p>
-                            <a href="mailto:info@codeandcircuit.edu.my" class="contact-link">info@codeandcircuit.edu.my</a>
+                            <a href="mailto:info@codeandcircuit.edu.my" class="contact-link">jason.codecircuitacademy@gmail.com</a>
                             <br>
-                            <a href="mailto:enrollment@codeandcircuit.edu.my" class="contact-link">enrollment@codeandcircuit.edu.my</a>
-                            <br>
-                            <a href="mailto:support@codeandcircuit.edu.my" class="contact-link">support@codeandcircuit.edu.my</a>
+                            <a href="mailto:enrollment@codeandcircuit.edu.my" class="contact-link">jason@codecircuitacademy.com</a>
                         </p>
                     </div>
                     
@@ -313,64 +334,210 @@
             <section class="faq-section">
                 <h2>Frequently Asked Questions</h2>
                 <div class="faq-container">
-                    <!-- FAQ Item 1 -->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What age groups do you teach?</h3>
-                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    <div class="faq-container">
+
+                        <!-- 1. Try & Fit -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Is the trial class really free?</h3>
+                                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes—your child’s first 60-minute trial class is completely free of charge. To make sure every reserved seat is used, we ask parents to confirm via SMS the day before <em>or</em> complete a 2-minute intake form within 24 h of booking. Can’t attend? Tell us 48 h ahead and we’ll offer the slot to another family.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p>Our programs are designed for students aged 8-17, with different curriculum paths depending on age and experience level. We group students by both age and experience to ensure appropriate learning environments.</p>
-                        </div>
-                    </div>
                     
-                    <!-- FAQ Item 2 -->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Do students need to bring their own equipment?</h3>
-                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        <!-- 2. Eligibility -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What age groups do you teach?</h3>
+                                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our programs are designed for students aged 8-17, with different curriculum paths depending on age and experience.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p>No, all necessary equipment is provided during class sessions. Students will work with our Arduino kits, sensors, and components. For the advanced module, students may optionally purchase their own kit to work on projects at home.</p>
-                        </div>
-                    </div>
                     
-                    <!-- FAQ Item 3 -->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>How often do classes meet?</h3>
-                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        <!-- 3. Class size -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How many students are in one class?</h3>
+                                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We cap each session at just <strong>12 learners</strong> so every child gets hands-on help.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p>Regular classes meet once per week for a 1-hour session. During school holidays, we offer intensive workshop options with longer sessions. The full curriculum for each module spans 24 sessions over 6 months.</p>
-                        </div>
-                    </div>
                     
-                    <!-- FAQ Item 4 -->
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Can students join mid-module?</h3>
-                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        <!-- 4. Schedule -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How often do classes meet?</h3>
+                                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Regular classes meet once a week for 75 minutes. Holiday workshops have longer sessions. Each module spans 24 sessions over six months.</p>
+                            </div>
                         </div>
-                        <div class="faq-answer">
-                            <p>While we recommend starting at the beginning of a module, we can accommodate mid-module enrollment with additional support sessions to help students catch up. Please contact us to discuss your specific situation.</p>
+                    
+                        <!-- 5. Equipment -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Do students need to bring their own equipment?</h3>
+                                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes a Laptop — Arduino kits, sensors and components are provided.</p>
+                            </div>
+                        </div>
+                    
+                        <!-- 6. Experience level -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Does my child need prior coding experience?</h3>
+                                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>No. The Beginner module starts from absolute zero—if your child can read simple English sentences, they’re ready.</p>
+                            </div>
+                        </div>
+                    
+                        <!-- 7. Language -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Which languages do you teach in?</h3>
+                                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Main instruction is in English, with clarifications in Bahasa Malaysia and தமிழ் so nothing gets lost in translation.</p>
+                            </div>
+                        </div>
+                    
+                        <!-- 8. Safety -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What safety measures are in place?</h3>
+                                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Mentors are background-checked, the lab is CCTV-monitored, and we keep first-aid kits and extinguishers on site.</p>
+                            </div>
+                        </div>
+                    
+                        <!-- 9. Special needs -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Do you accommodate special needs or learning differences?</h3>
+                                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes—tell us about ADHD, ASD, dyslexia, etc., when enrolling. We’ll arrange extra mentor support or quieter seating.</p>
+                            </div>
+                        </div>
+                    
+                        <!-- 10. Enrol & Fees -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How do I enrol and pay?</h3>
+                                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Click “Enrol Now,” fill the form, and pay registration + module + kit fees. Monthly tuition is due on the first class day of each billing cycle.</p>
+                            </div>
+                        </div>
+                    
+                        <!-- 11. Discounts -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Are there sibling or referral discounts?</h3>
+                                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Siblings enjoy 10 % off tuition, and you earn RM 50 credit for every friend who enrols via your link.</p>
+                            </div>
+                        </div>
+                    
+                        <!-- 12. Refund & materials -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What happens to fees, the kit, and the module if we withdraw?</h3>
+                                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p><strong>Registration, Module & Kit Fees:</strong> one-time, non-refundable; your child keeps the entire kit.</p>
+                                <p><strong>Monthly Tuition:</strong> non-refundable once the month starts, but missed lessons can be made up on Fridays.</p>
+                                <p><strong>If you withdraw mid-module:</strong> we hand over the remaining printed chapters so learning can continue at home.</p>
+                            </div>
+                        </div>
+                    
+                        <!-- 13. Missed class -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What if my child misses a class?</h3>
+                                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Attend our Friday Make-Up Lab (5-7 pm) at no extra cost. Please notify us 24 h in advance.</p>
+                            </div>
+                        </div>
+                    
+                        <!-- 14. Progress reports -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How will I know my child’s progress?</h3>
+                                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Bi-monthly e-mail reports, in-class photos, and mentor comments on strengths & next goals.</p>
+                            </div>
+                        </div>
+                    
+                        <!-- 15. After completion -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What happens after my child completes the module?</h3>
+                                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Move up to Intermediate Robotics & IoT, join our competition squad, or explore AI basics with micro:bit neural nets.</p>
+                            </div>
+                        </div>
+                    
+                        <!-- 16. Mid-module entry -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Can students join mid-module?</h3>
+                                <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes—contact us and we’ll arrange catch-up sessions so your child isn’t left behind.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
             </section>
         </div>
     </main>
 
-    <!-- Google Form Modal -->
-    <div id="booking-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Book Your Session</h2>
-            <div class="iframe-container">
-                <iframe id="google-form-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSc3uYpjhXYbSPsxyh4KB2axkWartHOBG7wue50BOCALjjkF4g/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <!-- Google Form Modal -->
+        <div id="booking-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Book Your Session</h2>
+                <div class="iframe-container">
+                    <iframe
+                        id="google-form-iframe"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSc3uYpjhXYbSPsxyh4KB2axkWartHOBG7wue50BOCALjjkF4g/viewform?embedded=true"
+                        width="100%"
+                        height="600"
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0"
+                    >
+                    Loading…
+                    </iframe>
+                </div>
             </div>
         </div>
-    </div>
 
     <!-- Footer -->
     <footer>

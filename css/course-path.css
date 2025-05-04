@@ -1,0 +1,380 @@
+/*==============================================
+  COURSE PATH - STYLESHEET
+  
+  Table of Contents:
+  1. Container & Background
+  2. Path Structure
+  3. Milestone Elements
+  4. Level Indicators
+  5. Module Selector
+  6. Animations & Effects
+  7. Responsive Adaptations
+==============================================*/
+
+/* Import color variables */
+@import url('colors.css');
+
+/*----------------------------------------------
+  1. CONTAINER & BACKGROUND
+----------------------------------------------*/
+.course-path-container {
+    position: relative;
+    padding: 60px 20px;
+    margin-bottom: 60px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.path-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    background-image: url('../Images/path-background.png');
+    background-size: cover;
+    z-index: 0;
+}
+
+.course-path-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/*----------------------------------------------
+  2. PATH STRUCTURE
+----------------------------------------------*/
+.path-track {
+    position: relative;
+    padding: 40px 0;
+}
+
+.path-line {
+    position: absolute;
+    background-color: var(--primary);
+    z-index: 1;
+}
+
+.path-horizontal {
+    height: 8px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.beginner-path .path-horizontal {
+    background-color: var(--beginner);
+}
+
+.intermediate-path .path-horizontal {
+    background-color: var(--intermediate);
+}
+
+.advanced-path .path-horizontal {
+    background-color: var(--advanced);
+}
+
+/* Create snake-like path with vertical and horizontal segments */
+.path-segment {
+    position: absolute;
+    background-color: var(--primary);
+    transition: background-color 0.5s ease;
+}
+
+.beginner-path .path-segment {
+    background-color: var(--beginner);
+}
+
+.intermediate-path .path-segment {
+    background-color: var(--intermediate);
+}
+
+.advanced-path .path-segment {
+    background-color: var(--advanced);
+}
+
+.segment-vertical {
+    width: 8px;
+    height: 60px;
+}
+
+.segment-horizontal {
+    height: 8px;
+}
+
+/*----------------------------------------------
+  3. MILESTONE ELEMENTS
+----------------------------------------------*/
+.milestone-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.milestone {
+    position: relative;
+    width: 140px;
+    z-index: 5;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.milestone:hover {
+    transform: translateY(-5px);
+}
+
+.milestone-point {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    position: relative;
+    box-shadow: 0 4px 15px var(--shadow-medium);
+    z-index: 10;
+}
+
+.beginner-path .milestone-point {
+    background-color: var(--beginner);
+}
+
+.intermediate-path .milestone-point {
+    background-color: var(--intermediate);
+}
+
+.advanced-path .milestone-point {
+    background-color: var(--advanced);
+}
+
+.milestone-title {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.milestone-description {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Milestone animations */
+.milestone.active .milestone-point {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(74, 0, 176, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(74, 0, 176, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(74, 0, 176, 0);
+    }
+}
+
+.beginner-path .milestone.active .milestone-point {
+    animation: pulseBeginnerColor 2s infinite;
+}
+
+@keyframes pulseBeginnerColor {
+    0% {
+        box-shadow: 0 0 0 0 rgba(74, 0, 176, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(74, 0, 176, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(74, 0, 176, 0);
+    }
+}
+
+.intermediate-path .milestone.active .milestone-point {
+    animation: pulseIntermediateColor 2s infinite;
+}
+
+@keyframes pulseIntermediateColor {
+    0% {
+        box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(138, 43, 226, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(138, 43, 226, 0);
+    }
+}
+
+.advanced-path .milestone.active .milestone-point {
+    animation: pulseAdvancedColor 2s infinite;
+}
+
+@keyframes pulseAdvancedColor {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 107, 107, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+    }
+}
+
+/*----------------------------------------------
+  4. LEVEL INDICATORS
+----------------------------------------------*/
+.level-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.level-indicator {
+    background-color: var(--bg-primary);
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+.beginner-path .level-indicator {
+    background-color: var(--beginner);
+}
+
+.intermediate-path .level-indicator {
+    background-color: var(--intermediate);
+}
+
+.advanced-path .level-indicator {
+    background-color: var(--advanced);
+}
+
+/*----------------------------------------------
+  5. MODULE SELECTOR
+----------------------------------------------*/
+.module-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.module-option {
+    padding: 12px 25px;
+    margin: 0 10px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.module-option.beginner {
+    border: 2px solid var(--beginner);
+    color: var(--beginner);
+}
+
+.module-option.intermediate {
+    border: 2px solid var(--intermediate);
+    color: var(--intermediate);
+}
+
+.module-option.advanced {
+    border: 2px solid var(--advanced);
+    color: var(--advanced);
+}
+
+.module-option.beginner.active {
+    background-color: var(--beginner);
+    color: white;
+}
+
+.module-option.intermediate.active {
+    background-color: var(--intermediate);
+    color: white;
+}
+
+.module-option.advanced.active {
+    background-color: var(--advanced);
+    color: white;
+}
+
+.module-option:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px var(--shadow-light);
+}
+
+/*----------------------------------------------
+  6. ANIMATIONS & EFFECTS
+----------------------------------------------*/
+.path-module {
+    display: none;
+}
+
+.path-module.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/*----------------------------------------------
+  7. RESPONSIVE ADAPTATIONS
+----------------------------------------------*/
+@media (max-width: 992px) {
+    .milestone {
+        width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .milestone-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        margin-bottom: 40px;
+    }
+    
+    .milestone {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    /* Reposition path for vertical layout */
+    .path-horizontal {
+        width: 8px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+    
+    .module-selector {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .module-option {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+        margin: 0;
+    }
+}

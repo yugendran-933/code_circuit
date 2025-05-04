@@ -3,34 +3,23 @@
  * Handles interactive elements like mobile menu and language selection
  */
 
-// Wait for the DOM to be fully loaded before running scripts
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu functionality
     initMobileMenu();
-    
-    // Language selector functionality
     initLanguageSelector();
+    initModalFunctionality();
+    initFaqAccordion();
 });
 
-/**
- * Initializes the mobile menu toggle functionality
- */
 function initMobileMenu() {
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
     const mainNav = document.querySelector('.main-nav');
-    
     if (mobileToggle && mainNav) {
-        mobileToggle.addEventListener('click', function() {
+        mobileToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
-            
-            // Toggle menu icon animation if desired
-            // mobileToggle.classList.toggle('active');
         });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!event.target.closest('.mobile-menu-toggle') && 
-                !event.target.closest('.main-nav') && 
+        document.addEventListener('click', event => {
+            if (!event.target.closest('.mobile-menu-toggle') &&
+                !event.target.closest('.main-nav') &&
                 mainNav.classList.contains('active')) {
                 mainNav.classList.remove('active');
             }
@@ -38,81 +27,57 @@ function initMobileMenu() {
     }
 }
 
-/**
- * Initializes the language selector functionality
- */
 function initLanguageSelector() {
     const languageSelect = document.querySelector('.language-dropdown select');
-    
     if (languageSelect) {
         languageSelect.addEventListener('change', function() {
-            const selectedLanguage = this.value;
-            if (selectedLanguage) {
-                // You can implement language switching logic here
-                console.log('Language changed to:', selectedLanguage);
-                
-                // Example: You could redirect to language-specific pages
-                // window.location.href = '/' + selectedLanguage + '/index.html';
-                
-                // Or set a cookie/localStorage value for language preference
-                // localStorage.setItem('preferredLanguage', selectedLanguage);
+            localStorage.setItem('preferredLanguage', this.value);
+            console.log('Language changed to:', this.value);
+        });
+    }
+}
+
+function initModalFunctionality() {
+    const modal     = document.getElementById('booking-modal');
+    const triggers  = document.querySelectorAll('.open-booking-modal');
+    const closeBtn  = modal.querySelector('.close-modal');
+
+    if (modal && triggers.length && closeBtn) {
+        triggers.forEach(btn => {
+            btn.addEventListener('click', e => {
+                e.preventDefault();
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        window.addEventListener('click', e => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
             }
         });
     }
 }
 
-//google form 
-// Modal functionality
-document.addEventListener('DOMContentLoaded', function() {
-    // Get the modal and buttons
-    const modal = document.getElementById('booking-modal');
-    const bookButtons = document.querySelectorAll('.book-button');
-    const closeModal = document.querySelector('.close-modal');
-    
-    // Open modal when any Book button is clicked
-    bookButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
-        });
-    });
-    
-    // Close modal when X is clicked
-    closeModal.addEventListener('click', function() {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Re-enable scrolling
-    });
-    
-    // Close modal when clicking outside the content
-    window.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
-        }
-    });
-});
-
-// Add this to your main.js file or include it here
-document.addEventListener('DOMContentLoaded', function() {
-    // FAQ accordion functionality
+function initFaqAccordion() {
     const faqItems = document.querySelectorAll('.faq-item');
-    
-    if (faqItems.length > 0) {
+    if (faqItems.length) {
         faqItems.forEach(item => {
             const question = item.querySelector('.faq-question');
-            
             question.addEventListener('click', () => {
-                // Toggle active class on the clicked item
                 item.classList.toggle('active');
-                
-                // Close other open items
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item && otherItem.classList.contains('active')) {
-                        otherItem.classList.remove('active');
+                faqItems.forEach(other => {
+                    if (other !== item && other.classList.contains('active')) {
+                        other.classList.remove('active');
                     }
                 });
             });
         });
     }
-});
+}

@@ -902,6 +902,39 @@ footer {
     text-decoration: none;
   }
   
+/*----------------------------------------------
+  FORCE-HIDE BOOK BUTTONS (desktop vs mobile)
+----------------------------------------------*/
 
-  
-  
+/* 1) Default: hide the mobile controls & button */
+.mobile-controls,
+.mobile-book {
+  display: none !important;
+}
+
+/* 2) On small screens (≤768px): hide the desktop Book and show mobile */
+@media (max-width: 768px) {
+  /* hide the right-side desktop Book button */
+  .nav-right .book-button {
+    display: none !important;
+  }
+  /* show the mobile controls wrapper and its Book button */
+  .mobile-controls {
+    display: flex !important;
+    align-items: center;
+  }
+  .mobile-book {
+    display: inline-block !important;
+  }
+}
+
+/* 3) On larger screens (>768px): show desktop Book, keep mobile hidden */
+@media (min-width: 769px) {
+  .nav-right .book-button {
+    display: inline-block !important;
+  }
+  .mobile-controls,
+  .mobile-book {
+    display: none !important;
+  }
+}

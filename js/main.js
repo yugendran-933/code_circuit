@@ -36,34 +36,41 @@ function initLanguageSelector() {
         });
     }
 }
-
+/**
+ * Initializes the modal functionality for booking forms
+ */
 function initModalFunctionality() {
-    const modal     = document.getElementById('booking-modal');
-    const triggers  = document.querySelectorAll('.open-booking-modal');
-    const closeBtn  = modal.querySelector('.close-modal');
+    const modal    = document.getElementById('booking-modal');
+    // bind to both the explicit class and the header/mobile book-button
+    const triggers = document.querySelectorAll('.open-booking-modal, .book-button');
+    const closeBtn = modal.querySelector('.close-modal');
 
-    if (modal && triggers.length && closeBtn) {
-        triggers.forEach(btn => {
-            btn.addEventListener('click', e => {
-                e.preventDefault();
-                modal.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-            });
+    console.log('› booking-modal found:', !!modal);
+    console.log('› modal triggers found:', triggers.length);
+
+    if (!modal || !triggers.length || !closeBtn) return;
+
+    triggers.forEach(btn => {
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
         });
+    });
 
-        closeBtn.addEventListener('click', () => {
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+
+    window.addEventListener('click', e => {
+        if (e.target === modal) {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
-        });
-
-        window.addEventListener('click', e => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        });
-    }
+        }
+    });
 }
+
 
 function initFaqAccordion() {
     const faqItems = document.querySelectorAll('.faq-item');

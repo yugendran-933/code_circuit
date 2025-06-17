@@ -366,6 +366,22 @@ nav ul li a:hover,
   margin-bottom: 8px;
   color: var(--text-secondary);
 }
+.member-bio-list {
+  color: var(--text-secondary);
+  margin: 15px 0;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.member-bio-list li {
+  margin-bottom: 8px;
+}
+
+.member-bio-list i {
+  margin-right: 8px;
+  color: var(--primary);
+}
+
 /*----------------------------------------------
   6. COURSE HIGHLIGHTS SECTION
 ----------------------------------------------*/
